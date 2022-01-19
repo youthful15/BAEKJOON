@@ -6,11 +6,13 @@ while exercise < N:
     if now + T <= M:
         now += T
         exercise += 1
+    elif m + T > M:
+        answer = -1
+        break
     elif now - R >= m:
         now -= R
     else:
-        answer = -1
-        break
+        now = m
     answer += 1
 
 print(answer)
