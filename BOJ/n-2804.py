@@ -5,5 +5,5 @@ print(list_a)
 for i in range(len(a)):
     for j in range(len(b)):
         if list_a[i] == list_b[j]:
-            braek
+            break
 print(i)
