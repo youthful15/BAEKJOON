@@ -1,3 +1,5 @@
-case = int(input())
+a = [1, 2]
 
-case = 
+a[0] += 1
+
+print(a)
