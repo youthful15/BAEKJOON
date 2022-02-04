@@ -1,2 +1,3 @@
-a = 141
-print(a[1])
+a = 'python'
+
+print(a[3:10])
