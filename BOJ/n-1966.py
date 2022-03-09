@@ -1,26 +1,26 @@
-from collections import deque
-
-case = int(input())
-
-for i in range(case):
-    num, q = map(int, input().split())
+for i in range(int(input())):
+    n, m = map(int, input().split())
     lst = list(map(int, input().split()))
-    cnt = 1
-    
-    if num == 1:
-        print(1)
-        continue
+    a = lst[m]
+    answer = 1
+    last = 'a'
     
     for num in lst:
-        if num > lst[q]:
-           cnt += 1
-           
-    close = [10 for i in range(num)]
-    
-    for j in range(num):
-        if 0 < lst[j] - lst[q] < close[j]:
-            close[j] = j
+        if num > lst[m]:
+            answer += 1
+            keep = num
             
-    print(close)
+    for i in range(m + 1, m + n):
+        if lst[i % n] == keep:
+            last = i % n
             
-    
+    print(f'last:{last}')
+            
+    if last != 'a':
+        for i in range(last + 1, last + n):
+            if i % n == m:
+                break
+            elif lst[i % n] == lst[m]:
+                answer += 1
+                
+    print(answer)
