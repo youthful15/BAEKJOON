@@ -13,11 +13,11 @@ def stair(i, n, s):
         if n + 1 <= 2:
             stair(i + 1, n + 1, s)
         if i + 2 <= a:
-            stair(i + 2, 0, s)
+            stair(i + 2, 1, s)
 
 
 a = int(input())
-lst = [int(input()) for _ in range(a)] + [0]
+lst = [0] + [int(input()) for _ in range(a)]
 ans = 0
 
 stair(0, 0, 0)
