@@ -1,20 +1,11 @@
-def fibonacci(s):
-    global z, o
-    
-    if s == 0:
-        z += 1
-        return
-    elif s == 1:
-        o += 1
-        return
-    else:
-        fibonacci(s - 1)
-        fibonacci(s - 2)
-        
+lst = [[1, 0], [0, 1]]
+inp = []
 
 for _ in range(int(input())):
-    z = o = 0
-    a = int(input())
-    fibonacci(a)
+    inp.append(int(input()))
     
-    print(z, o)
+for s in range(max(inp) - 1):
+        lst.append([lst[s][0] + lst[s + 1][0], lst[s][1] + lst[s + 1][1]])
+   
+for a in inp:        
+    print(lst[a][0], lst[a][1])
