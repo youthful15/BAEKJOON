@@ -13,6 +13,6 @@ while True:
     i += 1
 
 if a % b:
-    print(f'{a % i}/{i - a % i + 1}')
+    print(f'{abs(i - b)}/{i - abs(i - b)}')
 else:
     print(f'{i}/1')
